@@ -81,9 +81,6 @@ R.pipe(
         }],
         styles: {
           root: {
-            position: 'absolute',
-            zIndex: 1,
-
             backgroundColor: 'black',
             width: window.innerWidth,
             height: window.innerHeight,
