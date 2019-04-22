@@ -20,12 +20,13 @@ export default ({
     'top.png',
     'bottom.png',
   ],
-  path = 'http://localhost:4444/wix/',
+  path = 'http://localhost:4444/wix/common/',
   radius = 20,
   refractionRatio = 0.95,
   widthSegments = 32,
   heightSegments = 32,
 }: Props = {}): * => {
+
   const envMap = new THREE.CubeTextureLoader().setPath(path).load(images);
 
   envMap.mapping = THREE.CubeRefractionMapping;

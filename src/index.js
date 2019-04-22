@@ -78,10 +78,16 @@ R.pipe(
         }, {
           ...generateAnimateProps(),
           object: lens(),
+        }, {
+          ...generateAnimateProps(),
+          object: lens({
+            // path: 'http://localhost:4444/wix/grid/',
+            radius: 50,
+          }),
         }],
         styles: {
           root: {
-            backgroundColor: 'black',
+            // backgroundColor: 'black',
             width: window.innerWidth,
             height: window.innerHeight,
           },
