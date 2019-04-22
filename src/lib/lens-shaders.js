@@ -27,6 +27,7 @@ export default ({
   heightSegments = 32,
 }: Props = {}): * => {
   const envMap = new THREE.CubeTextureLoader().setPath(path).load(images);
+  envMap.format = THREE.RGBFormat;
 
   envMap.mapping = THREE.CubeRefractionMapping;
 
@@ -37,9 +38,14 @@ export default ({
         widthSegments,
         heightSegments,
       ),
-      new THREE.MeshBasicMaterial({
+      // new THREE.MeshLambertMaterial({
+      //   color: 0xff6600,
+      //   envMap,
+      //   combine: THREE.MixOperation,
+      // }),
+      new THREE.MeshLambertMaterial({
+        color: 0xffffff,
         envMap,
-        refractionRatio,
       }),
     )
   );

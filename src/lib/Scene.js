@@ -96,6 +96,10 @@ export default class Scene extends React.Component<Props, State> {
   addObjects = () => {
     const { objects } = this.props;
 
+    const ambient = new THREE.AmbientLight('red');
+    // const ambient = new THREE.AmbientLight(0xffffff);
+    this.scene.add(ambient);
+
     // eslint-disable-next-line
     objects.map(({ object }) => {
       this.scene.add(object);

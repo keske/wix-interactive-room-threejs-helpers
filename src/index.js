@@ -12,6 +12,7 @@ import Scene from './lib/Scene';
 
 import cube from './lib/cube';
 import lens from './lib/lens';
+import lensShaders from './lib/lens-shaders';
 import sphere from './lib/sphere';
 
 /**
@@ -75,19 +76,20 @@ R.pipe(
         }, {
           ...generateAnimateProps(),
           object: cube(),
-        }, {
+        },
+        // {
+        //   ...generateAnimateProps(),
+        //   object: lens(),
+        // },
+        {
           ...generateAnimateProps(),
-          object: lens(),
-        }, {
-          ...generateAnimateProps(),
-          object: lens({
-            // path: 'http://localhost:4444/wix/grid/',
+          object: lensShaders({
             radius: 50,
           }),
         }],
         styles: {
           root: {
-            // backgroundColor: 'black',
+            backgroundColor: 'black',
             width: window.innerWidth,
             height: window.innerHeight,
           },
