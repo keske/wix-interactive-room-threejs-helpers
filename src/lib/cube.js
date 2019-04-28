@@ -7,12 +7,12 @@ import colorMaterial from './colorMaterial';
 import refractionMatarial from './refractionMatarial';
 
 type Props = {
-  color: string,
+  color?: string,
   images?: Array<string>,
   path?: string,
   refraction?: boolean,
   refractionRatio?: number,
-  size: number,
+  size?: number,
 };
 
 export default ({

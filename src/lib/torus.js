@@ -7,16 +7,16 @@ import colorMaterial from './colorMaterial';
 import refractionMatarial from './refractionMatarial';
 
 type Props = {
-  arc: number,
-  color: string,
+  arc?: number,
+  color?: string,
   images?: Array<string>,
   path?: string,
-  radius: number,
+  radius?: number,
   refraction?: boolean,
   refractionRatio?: number,
-  radialSegments: number,
-  tube: number,
-  tubularSegments: number,
+  radialSegments?: number,
+  tube?: number,
+  tubularSegments?: number,
 };
 
 export default ({
