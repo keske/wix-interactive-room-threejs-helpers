@@ -11,16 +11,16 @@ import * as serviceWorker from './utils/serviceWorker';
 import Scene from './lib/Scene';
 
 import cube from './lib/cube';
-import lens from './lib/lens';
 import sphere from './lib/sphere';
+import tetrahedron from './lib/tetrahedron';
 import torus from './lib/torus';
 
 export default Scene;
 
 export {
   cube,
-  lens,
   sphere,
+  tetrahedron,
   torus,
 };
 
@@ -70,10 +70,10 @@ R.pipe(
           object: cube(),
         }, {
           ...generateAnimateProps(),
-          object: lens(),
+          object: torus(),
         }, {
           ...generateAnimateProps(),
-          object: torus(),
+          object: tetrahedron(),
         }],
         styles: {
           root: {
