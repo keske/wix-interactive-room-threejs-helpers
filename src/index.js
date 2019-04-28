@@ -11,6 +11,7 @@ import * as serviceWorker from './utils/serviceWorker';
 import Scene from './lib/Scene';
 
 import circle from './lib/circle';
+import cone from './lib/cone';
 import cube from './lib/cube';
 import sphere from './lib/sphere';
 import tetrahedron from './lib/tetrahedron';
@@ -57,6 +58,9 @@ R.pipe(
         objects: [{
           ...generateAnimateProps(),
           object: circle(),
+        }, {
+          ...generateAnimateProps(),
+          object: cone(),
         }, {
           ...generateAnimateProps(),
           object: sphere(),
