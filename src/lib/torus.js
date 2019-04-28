@@ -30,7 +30,7 @@ export default ({
     'top.png',
     'bottom.png',
   ],
-  path = 'http://localhost:4444/wix/common/',
+  path = 'http://localhost:3030/cube/',
   radius = 10,
   radialSegments = 16,
   refraction = true,

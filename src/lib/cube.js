@@ -25,7 +25,7 @@ export default ({
     'top.png',
     'bottom.png',
   ],
-  path = 'http://localhost:4444/wix/common/',
+  path = 'http://localhost:3030/cube/',
   refraction = true,
   refractionRatio = 0.95,
   size = 20,
