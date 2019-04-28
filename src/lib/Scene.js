@@ -166,7 +166,9 @@ export default class Scene extends React.Component<Props, State> {
       R.keys(animate).map((property) => {
         // eslint-disable-next-line
         R.keys(animate[property]).map((key) => {
-          this.objects[index][property][key] = animate[property][key];
+          if (this.objects[index]) {
+            this.objects[index][property][key] = animate[property][key];
+          }
         });
       });
     });
