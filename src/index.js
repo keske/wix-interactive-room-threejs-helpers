@@ -12,8 +12,11 @@ import Scene from './lib/Scene';
 
 import cube from './lib/cube';
 import lens from './lib/lens';
-import lensShaders from './lib/lens-shaders';
 import sphere from './lib/sphere';
+
+export default Scene;
+
+export { cube, lens, sphere };
 
 /**
  * Demo
@@ -43,24 +46,7 @@ R.pipe(
           <div style={styles.root}>
             {
               R.not(R.isEmpty(objects)) && (
-                <Scene
-                  {...{
-                    acceleration: {
-                      x: 0,
-                      y: 0,
-                      z: 0,
-                    },
-                    mouse: {
-                      x: 0,
-                      y: 0,
-                    },
-                    objects,
-                    screen: {
-                      width: window.innerWidth,
-                      height: window.innerHeight,
-                    },
-                  }}
-                >
+                <Scene {...{ objects }}>
                   {
                     (/* { scene } */) => false
                   }
@@ -76,16 +62,9 @@ R.pipe(
         }, {
           ...generateAnimateProps(),
           object: cube(),
-        },
-        // {
-        //   ...generateAnimateProps(),
-        //   object: lens(),
-        // },
-        {
+        }, {
           ...generateAnimateProps(),
-          object: lensShaders({
-            radius: 50,
-          }),
+          object: lens(),
         }],
         styles: {
           root: {
