@@ -42,7 +42,7 @@ R.pipeP(
         position: {
           x: Math.floor(Math.random() * 200),
           y: Math.floor(Math.random() * 200),
-          // z: Math.floor(Math.random() * 20),
+          z: Math.floor(Math.random() * 20),
         },
         rotation: {
           x: Math.floor(Math.random() * 360),
