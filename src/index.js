@@ -13,10 +13,16 @@ import Scene from './lib/Scene';
 import cube from './lib/cube';
 import lens from './lib/lens';
 import sphere from './lib/sphere';
+import torus from './lib/torus';
 
 export default Scene;
 
-export { cube, lens, sphere };
+export {
+  cube,
+  lens,
+  sphere,
+  torus,
+};
 
 /**
  * Demo
@@ -65,6 +71,9 @@ R.pipe(
         }, {
           ...generateAnimateProps(),
           object: lens(),
+        }, {
+          ...generateAnimateProps(),
+          object: torus(),
         }],
         styles: {
           root: {
