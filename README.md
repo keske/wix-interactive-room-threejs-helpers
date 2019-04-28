@@ -1,2 +1,2 @@
-WIX Party / ThreeJS Lib
+WIX Party / ThreeJS Helper Lib
 =========================
