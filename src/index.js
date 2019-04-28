@@ -14,6 +14,7 @@ import circle from './lib/circle';
 import cone from './lib/cone';
 import cube from './lib/cube';
 import dodecahedron from './lib/dodecahedron';
+import octahedron from './lib/octahedron';
 import sphere from './lib/sphere';
 import tetrahedron from './lib/tetrahedron';
 import torus from './lib/torus';
@@ -68,6 +69,9 @@ R.pipe(
         }, {
           ...generateAnimateProps(),
           object: dodecahedron(),
+        }, {
+          ...generateAnimateProps(),
+          object: octahedron(),
         }, {
           ...generateAnimateProps(),
           object: sphere(),
