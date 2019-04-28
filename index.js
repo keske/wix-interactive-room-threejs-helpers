@@ -1,9 +1,9 @@
-import Scene from './lib/Scene';
+import Scene from './src/lib/Scene';
 
-import cube from './lib/cube';
-import sphere from './lib/sphere';
-import tetrahedron from './lib/tetrahedron';
-import torus from './lib/torus';
+import cube from './src/lib/cube';
+import sphere from './src/lib/sphere';
+import tetrahedron from './src/lib/tetrahedron';
+import torus from './src/lib/torus';
 
 export default Scene;
 
