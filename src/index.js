@@ -30,7 +30,11 @@ R.pipeP(
   async () => (
     new Promise((resolve) => {
       new THREE.FontLoader()
-        .load('http://localhost:3030/font.json', (font) => {
+        .load((
+          process.env.REACT_APP_STAGE === 'production'
+            ? 'http://134.209.218.211:3070/font.json'
+            : 'http://localhost:3070/font.json'
+        ), (font) => {
           resolve(font);
         });
     })
